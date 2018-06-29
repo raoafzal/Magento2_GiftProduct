@@ -1,0 +1,28 @@
+{
+  "name": "Quickpromo/giftproduct",
+  "description": "Gift Product add into cart.",
+  "require": {
+    "magento/module-sales-rule": ">=100.0.0",
+    "php": ">=7.0"
+  },
+  
+  "type": "magento2-module",
+  "version": "1.0.3",
+  "license": [
+    "OSL-3.0"
+  ],
+  "authors": [
+    {
+      "name": "Rao Afzal",
+      "email": "raoafzal25@gmail.com"
+    }
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Quickpromo\\GiftProduct\\": ""
+    }
+  }
+}

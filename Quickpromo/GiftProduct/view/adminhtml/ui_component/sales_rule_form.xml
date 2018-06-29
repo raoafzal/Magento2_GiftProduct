@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category   Quickpromo
+ * @package    Quickpromo_GiftProduct
+ * @author     Rao <raoafzal25@gmail.com>
+ * @copyright  idealwebz.com
+ * @license    http://opensource.org/licenses/osl-3.0.php
+ */
+-->
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <fieldset name="actions">
+        <field name="gift_sku">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="label" xsi:type="string" translate="true">Gift SKU</item>
+                    <item name="dataType" xsi:type="string">text</item>
+                    <item name="formElement" xsi:type="string">input</item>
+                    <item name="source" xsi:type="string">sales_rule</item>
+                    <item name="dataScope" xsi:type="string">gift_sku</item>
+                    <item name="sortOrder" xsi:type="number">1</item>
+                    <item name="notice" xsi:type="string" translate="true">Only simple and virtual types are supported.</item>
+                </item>
+            </argument>
+        </field>
+    </fieldset>
+</form>

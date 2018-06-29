@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category   Quickpromo
+ * @package    Quickpromo_GiftProduct
+ * @author     Rao <raoafzal25@gmail.com>
+ * @copyright  idealwebz.com
+ * @license    http://opensource.org/licenses/osl-3.0.php
+ */
+ -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="minicart">
+            <arguments>
+                <argument name="jsLayout" xsi:type="array">
+                    <item name="components" xsi:type="array">
+                        <item name="minicart_content" xsi:type="array">
+                            <item name="config" xsi:type="array">
+                                <item name="itemRenderer" xsi:type="array">
+                                    <item name="freeproduct_gift" xsi:type="string">freeproductRenderer</item>
+                                </item>
+                            </item>
+                            <item name="children" xsi:type="array">
+                                <item name="freeproduct.item.renderer" xsi:type="array">
+                                    <item name="component" xsi:type="string">uiComponent</item>
+                                    <item name="config" xsi:type="array">
+                                        <item name="displayArea" xsi:type="string">freeproductRenderer</item>
+                                        <item name="template" xsi:type="string">Quickpromo_GiftProduct/minicart/item/freeproduct</item>
+                                    </item>
+                                    <item name="children" xsi:type="array">
+                                        <item name="item.image" xsi:type="array">
+                                            <item name="component" xsi:type="string">Magento_Catalog/js/view/image</item>
+                                            <item name="config" xsi:type="array">
+                                                <item name="template" xsi:type="string">Magento_Catalog/product/image</item>
+                                                <item name="displayArea" xsi:type="string">itemImage</item>
+                                            </item>
+                                        </item>
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>

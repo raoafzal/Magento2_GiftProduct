@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\SalesRule\Model\Rule\Action\Discount\CalculatorFactory">
+        <arguments>
+            <argument name="discountRules" xsi:type="array">
+                <item name="add_gift" xsi:type="string">Quickpromo\GiftProduct\SalesRule\Action\GiftAction</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\SalesRule\Model\Validator\Pool">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="discount" xsi:type="array">
+                    <item name="giftproduct_exclude_gift" xsi:type="object">Quickpromo\GiftProduct\SalesRule\Validator\GiftItemExcluder</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>    
+    
+   <preference for="Magento\SalesRule\Controller\Adminhtml\Promo\Quote\Edit" type="Quickpromo\GiftProduct\Controller\Adminhtml\Promo\Quote\Edit" />
+
+    
+</config>
